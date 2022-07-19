@@ -12,8 +12,9 @@ body {
     font-family: 'gulim';
 }
 
-.profile-font {
-    margin-bottom: 5px
+.profile-know {
+    font-size: 15px;
+    margin-bottom: 0px
 }
 
 p,h4,h3,h2,h1,span {
@@ -396,6 +397,13 @@ td, th {
     margin-bottom: 50px;
 }
 
+.product-container::after{
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
 .product-container i {
     background-color: antiquewhite;
     width: 100px;
@@ -665,6 +673,245 @@ td, th {
     padding: 50px;
 }
 
+
+
+
+/* main2.css */
+.custom {
+    color: skyblue
+}
+
+.profile-button {
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 0
+}
+
+.skills-badge {
+    font-size: 13px;
+    text-align: center;
+    width: 80px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 2px solid #eee;
+    border-radius: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+.profile-font {
+    margin-bottom: 2px
+}
+
+
+
+
+
+.hw-list {
+    font-family: 이쁜폰트;
+    list-style: none;
+    padding: 10px;
+    padding-left: 15px;
+    border: 1px solid #eee;
+    
+}
+.hw-list:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.hw-box {
+    padding: 5px;
+    padding-left: 20px;
+    margin: 20px;
+    border: 0px solid;
+    border-radius: 5px;
+    background-color: lightgreen
+}
+
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.row {
+    width: 100%;
+    height: 50px;
+    background-color: skyblue;
+}
+
+
+
+
+.bt-hw {
+    padding: 15px;
+    font-family: 이쁜폰트;
+    color: white;
+    background-color: skyblue;
+    border-radius: 5px;
+    border: 1px solid skyblue;
+}
+.bt-hw:hover {
+    animation-name: 흔들버튼;
+    animation-duration: 0.5s;
+}
+
+@keyframes 흔들버튼 {
+    0%{
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+        
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.img-hw {
+}
+
+.img-hw:hover {
+    animation-name: 기호숙제;
+    animation-duration: 1s;
+}
+
+@keyframes 기호숙제 {
+    0%{
+       transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    70%{
+        transform: scale(1.5)rotate(40deg);
+    }
+    100%{
+        transform: scale(1.5)rotate(40deg);
+        
+    }
+}
+
+
+
+.menu-hw {
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 100%;
+    z-index: 5;
+    padding: 25px;
+    position: fixed;
+    text-align: right;
+    transform: translateX(-150px);
+    transition: all 1s
+
+}
+.menu-hw:hover {
+    transform: translateX(0px);
+    text-align: center;
+
+}
+.menu-hw p {
+    text-align: center;
+}
+
+@keyframes 메뉴숙제 {
+    0%{
+        transform: translateX(-250px) skewX(-30deg)
+        
+    }
+    50%{
+        transform: skewX(-30deg) translateX(50px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+    
+}
+
+.menu-hw:hover p {
+    animation-name: 메뉴숙제;
+    animation-duration: 1s;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    grid-template-areas: 
+        "헤더 헤더 헤더 헤더"
+        "사이드 메인 메인 메인"
+        "사이드 메인 메인 메인"
+}
+.grid-container div {
+    border: 1px solid black;
+}
+
+.grid-nav {
+    grid-area: 헤더;
+}
+
+.grid-sidebar {
+    grid-area: 사이드;
+}
+
+.grid-main {
+    grid-area: 메인;
+}
+
+.grid-container2 {
+    max-width: 600px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px
+}
+.grid-container2 img {
+    width: 100%;
+    display: block;
+}
+
+
+.grid-hw1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.grid-hw2 {
+    grid-column: 3 / 4;
+    grid-row: 1/ 2;
+    
+}
+
+.grid-hw3 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.grid-hw4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.grid-hw5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.grid-hw6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
 @media screen and (max-width:768px){
     .main-title{
         font-size: 20px;
@@ -701,30 +948,10 @@ td, th {
         right: 0;
         margin: auto;
     }
+    .grid-container2{
+            display: block;
+        
+    }
+  
 }
 
-.custom {
-    color: green
-}
-/* main2.css */
-.custom {
-    color: skyblue
-}
-
-.profile-button {
-    font-size: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border: 0
-}
-
-.skills-badge {
-    text-align: center;
-    width: 80px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border: 2px solid #eee;
-    border-radius: 30px;
-    float: left;
-    margin-right: 10px;
-}
